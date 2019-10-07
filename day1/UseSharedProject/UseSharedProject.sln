@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseSharedProject", "UseSharedProject\UseSharedProject.csproj", "{3AA9DA4D-3C5F-4C56-A368-B96A3D12B4A9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MySharedProject", "MySharedProject\MySharedProject.shproj", "{39581EBF-C581-42F7-AD11-339896261A3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{EA0C3DAB-22EC-4685-B339-EE5CA1C5F0CE}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MySharedProject\MySharedProject.projitems*{39581ebf-c581-42f7-ad11-339896261a3c}*SharedItemsImports = 13
+		MySharedProject\MySharedProject.projitems*{ea0c3dab-22ec-4685-b339-ee5ca1c5f0ce}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AA9DA4D-3C5F-4C56-A368-B96A3D12B4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA9DA4D-3C5F-4C56-A368-B96A3D12B4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA9DA4D-3C5F-4C56-A368-B96A3D12B4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA9DA4D-3C5F-4C56-A368-B96A3D12B4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA0C3DAB-22EC-4685-B339-EE5CA1C5F0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0C3DAB-22EC-4685-B339-EE5CA1C5F0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0C3DAB-22EC-4685-B339-EE5CA1C5F0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA0C3DAB-22EC-4685-B339-EE5CA1C5F0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F048989-7E46-4BF6-B898-3EDEC502E0DA}
+	EndGlobalSection
+EndGlobal
