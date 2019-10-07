@@ -23,7 +23,8 @@ namespace MyAndroidApp
             // Create your application here
             _books = new List<Book>(new BookFactory().GetBooks());
 
-            ListAdapter = new ArrayAdapter<Book>(this, Android.Resource.Layout.SimpleListItem1); //  new BookListAdapter(this, _books);
+            ListAdapter = new BookListAdapter(this, _books);
+            // ListAdapter = new ArrayAdapter<Book>(this, Android.Resource.Layout.SimpleListItem1, _books); 
         }
 
         protected override void OnListItemClick(ListView l, View v, int position, long id)
