@@ -2,9 +2,9 @@
 
 Oct-2019
 
-[Lab 1](https://github.com/christiannagel/xamarinworkshopoct2019/blob/master/lab1.md)
+[Lab 1 - Xamarin.Android](https://github.com/christiannagel/xamarinworkshopoct2019/blob/master/lab1.md)
 
-[Lab 3](https://github.com/christiannagel/xamarinworkshopoct2019/blob/master/lab3.md)
+[Lab 3 - Xamarin.Forms](https://github.com/christiannagel/xamarinworkshopoct2019/blob/master/lab3.md)
 
 Interesting Links
 
