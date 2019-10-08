@@ -9,6 +9,8 @@ namespace UseSharedProject
         {
             string s = new Foo().Bar();
             Console.WriteLine(s);
+
+            // this is a change in the sample branch
         }
     }
 }
