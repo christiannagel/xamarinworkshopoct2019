@@ -9,6 +9,8 @@ namespace UseSharedProject
         {
             string s = new Foo().Bar();
             Console.WriteLine(s);
+
+            // this is in the master branch
         }
     }
 }
