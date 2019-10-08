@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:extensions="clr-namespace:BooksSample.Extensions"
+             mc:Ignorable="d"
+             x:Class="BooksSample.MainPage">
+    <ContentPage.Resources>
+        <DataTemplate x:Key="wroxBookTemplate">
+            <ViewCell>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Title, Mode=OneWay}" />
+
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
+        <DataTemplate x:Key="defaultBookTemplate">
+            <ViewCell>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Title, Mode=OneWay}" />
+                    <Label Text="{Binding Publisher, Mode=OneWay}" BackgroundColor="Red" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
+        <extensions:BookTemplateSelector x:Key="bookTemplateSelector"
+                                         WroxTemplate="{StaticResource wroxBookTemplate}"
+                                         DefaultBookTemplate="{StaticResource defaultBookTemplate}" />
+    </ContentPage.Resources>
+
+    <StackLayout x:Name="layout1">
+        <!-- Place new controls here -->
+        <Label Text="Books" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <ListView ItemsSource="{Binding Path=Books, Mode=OneWay}" 
+                  ItemTemplate="{StaticResource bookTemplateSelector}">
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
