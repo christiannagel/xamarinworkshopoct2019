@@ -22,14 +22,10 @@
         android:id="@+id/button1" />
 
     <Button
-        android:text="Show list"
+        android:textAllCaps="false"
+        android:text="@string/showbookslist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonshowlist" />
-
-
-
-
-  
 
 </LinearLayout>

@@ -4295,7 +4295,10 @@ namespace MyAndroidApp
 			public const int search_menu_title = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int status_bar_notification_info_overflow = 2131623992;
+			public const int showbookslist = 2131623992;
+			
+			// aapt resource value: 0x7F0E0039
+			public const int status_bar_notification_info_overflow = 2131623993;
 			
 			static String()
 			{
