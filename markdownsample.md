@@ -19,3 +19,11 @@
 3. four
 
 [A blog](https://csharp.christiannagel.com)
+
+
+```charp
+public int Foo(int x, int y)
+{
+  return x + y;
+}
+```
