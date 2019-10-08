@@ -21,7 +21,7 @@
 [A blog](https://csharp.christiannagel.com)
 
 
-```charp
+```csharp
 public int Foo(int x, int y)
 {
   return x + y;
