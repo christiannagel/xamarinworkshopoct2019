@@ -12,3 +12,4 @@ Interesting Links
 * [Android Developer](https://developer.android.com/)
 * [Predefined Android List Item Layouts](https://robgibbens.com/androids-built-in-list-item-layouts/)
 * [Microsoft UWP Business App Sample - Inventory Sample](https://github.com/microsoft/InventorySample)
+* [Professional C# 7 Samples](https://github.com/ProfessionalCSharp/ProfessionalCSharp7)
