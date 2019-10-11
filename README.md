@@ -13,3 +13,4 @@ Interesting Links
 * [Predefined Android List Item Layouts](https://robgibbens.com/androids-built-in-list-item-layouts/)
 * [Microsoft UWP Business App Sample - Inventory Sample](https://github.com/microsoft/InventorySample)
 * [Professional C# 7 Samples](https://github.com/ProfessionalCSharp/ProfessionalCSharp7)
+* [Xamarin Forms Samples from Xamarin](https://github.com/xamarin/xamarin-forms-samples)
