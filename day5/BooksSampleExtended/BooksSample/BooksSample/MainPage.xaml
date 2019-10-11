@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:exs="clr-namespace:BooksSample.Extensions"
+             xmlns:models="clr-namespace:BooksLib;assembly=BooksLib"
+             xmlns:conv="clr-namespace:BooksSample.Converters"
+             mc:Ignorable="d"
+             x:Class="BooksSample.MainPage">
+    <ContentPage.Resources>
+        <conv:StringArrayToStringConverter x:Key="stringArrayConverter" />
+
+        <DataTemplate x:Key="wroxBookTemplate">
+            <ViewCell>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Title, Mode=OneWay}" />
+                    <Label Text=
+                        "{Binding Authors, Mode=OneWay, 
+                            Converter={StaticResource stringArrayConverter}, 
+                            ConverterParameter=';      '}" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
+        <!-- Xamarin version of "compiled binding" -->
+        <DataTemplate x:Key="defaultBookTemplate" x:DataType="models:Book">
+            <ViewCell>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Title, Mode=OneWay}" />
+                    <Label Text="{Binding Publisher, Mode=OneWay}" BackgroundColor="Red" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
+        <exs:BookTemplateSelector x:Key="bookTemplateSelector"
+                                         WroxTemplate="{StaticResource wroxBookTemplate}"
+                                         DefaultBookTemplate="{StaticResource defaultBookTemplate}" />
+
+    </ContentPage.Resources>
+
+    <StackLayout x:Name="layout1">
+
+        <Label Text="Books" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand">
+        </Label>
+        <Button Style="{StaticResource buttonStyle}" Command="{Binding RefreshBooksCommand, Mode=OneTime}" Text="Refresh" />
+        <Button Style="{StaticResource buttonStyle}" Command="{Binding AddBookCommand, Mode=OneTime}" Text="Add Book" BackgroundColor="Yellow" />
+        <Button Style="{StaticResource buttonStyle}" Text="Change a book" />
+        <Entry Text="{Binding Path=BookId, Mode=TwoWay}" />
+        <Button Text="Get Book" Command="{Binding Path=GetBookCommand, Mode=OneTime}" />
+        <Label Text="{Binding Path=SelectedBook.BookId, Mode=OneWay}" BackgroundColor="Azure" />
+        <ListView ItemsSource="{Binding Path=Books, Mode=OneWay}"
+                  SelectedItem="{Binding Path=SelectedBook, Mode=TwoWay}"
+                  ItemTemplate="{StaticResource bookTemplateSelector}">
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
